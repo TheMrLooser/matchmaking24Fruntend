@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+ padding: 0;
+ /* width:fit-content; */
+
+}
+
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+  /* width:fit-content; */
+
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
