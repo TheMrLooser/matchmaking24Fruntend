@@ -82,6 +82,7 @@ margin-left: 30px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     display: ${(props) => props.status =="show" ? "block" :"none" };
+    padding-bottom: 100px;
 
 };
 
@@ -335,7 +336,7 @@ padding-bottom: 50px;
 
 export const TopBannerContainer = styled.div`
 width: 100%;
-height: 70px;
+min-height: 70px;
 background-color: #FFC900;
 border-radius: 3px ;
 display: flex;
@@ -347,7 +348,7 @@ font-weight: 600;
 letter-spacing: 1px;
 @media only screen and (max-width:900px) {
     max-width: 70%;
-
+    padding-left: 10px;
 }
 `
 export const Title = styled.div`
