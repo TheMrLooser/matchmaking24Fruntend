@@ -20,7 +20,7 @@ import gp_3 from '../images/MatchMaking24-friendship-dating-matrimony-match-gp_3
 import gp_4 from '../images/MatchMaking24-friendship-dating-matrimony-match-gp_4.webp'
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import {HOST_NAME} from '../hostName'
@@ -28,15 +28,17 @@ import { UserProfileData } from '../App';
 
 
 
-export const Landingpage = () => {
+export const Landingpage = () => { 
 
     const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout ,loginWithPopup } = useAuth0();
   const {setUserData,userData} = useContext(UserProfileData)
+const nevigate = useNavigate()
   useEffect(()=>{
     const login = async()=>{
       const res = await axios.post(`${HOST_NAME}/user/register`,{email:user.email,name:user.name,img:user.picture})
       if(res.data.message!="Profile Registerd"){
         setUserData(res.data.message)
+        nevigate('/profile')
       }
     }
     login()

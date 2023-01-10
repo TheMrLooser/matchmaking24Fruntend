@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AnkarTag, LogoContainer, LogoImg, LogoText, MainMenuContainer, MenuContainer, MenuElement, MenuElementContainer, MenuWrapper, NavContainer, NavElement, NavElementWrapper, NavWrapper, ProfileLogo, ProfileLogoContainer } from '../styledComponents/Navbar'
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logoImg from '../images/MatchMaking24-friendship-dating-matrimony-match-logo.svg'
 import LinkedinLogo from '../images/MatchMaking24-friendship-dating-matrimony-match-linkedin.png'
 import { useAuth0 } from "@auth0/auth0-react";
@@ -15,11 +15,13 @@ export const Navbar = () => {
   const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout ,loginWithPopup} = useAuth0();
   const [openMenuBar,setOpenMenuBar] = useState(false)
   const {setUserData,userData} = useContext(UserProfileData)
+  const nevigate =  useNavigate()
   useEffect(()=>{
     const login = async()=>{
       const res = await axios.post(`${HOST_NAME}/user/register`,{email:user.email,name:user.name,img:user.picture})
       if(res.data.message!="Profile Registerd"){
         setUserData(res.data.message)
+        nevigate('/profile')
       }
     }
     login()
