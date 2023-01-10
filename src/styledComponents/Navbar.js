@@ -62,7 +62,8 @@ height:inherit;
 export const NavElement = styled.span`
 width:100%;
 max-width:15%;
-/* padding:0px 5%; */
+padding:0px 5%;
+min-width: max-content;
 cursor:pointer;
 height:inherit;
 border:2px solid black;

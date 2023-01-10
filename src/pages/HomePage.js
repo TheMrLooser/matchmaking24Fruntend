@@ -287,7 +287,7 @@ PaperProps: {
 
                <CardMainContainer>
                     <CardWrapper>
-                        <FilterOpenerContainer><FilterOpener onClick={ShowFilter}>Open Folter </FilterOpener></FilterOpenerContainer>
+                        <FilterOpenerContainer><FilterOpener onClick={ShowFilter}>Open Filter </FilterOpener></FilterOpenerContainer>
                         <TopBannerContainer>Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match</TopBannerContainer>
                         <Title>Profiles:</Title>
                         <CardContainer>
@@ -308,7 +308,7 @@ PaperProps: {
                     </CardWrapper>
                </CardMainContainer>
             </Wrapper>
-            <MovingTextContainer> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match &nbsp;• &nbsp; Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match &nbsp;</marquee></MovingTextContainer>
+            <MovingTextContainer style={{marginTop:'100px'}}> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match &nbsp;• &nbsp; Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match &nbsp;</marquee></MovingTextContainer>
 
         </Container>
     </>)
