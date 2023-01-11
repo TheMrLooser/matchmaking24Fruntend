@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { AnkarTag, LogoContainer, LogoImg, LogoText, MainMenuContainer, MenuContainer, MenuElement, MenuElementContainer, MenuWrapper, NavContainer, NavElement, NavElementWrapper, NavWrapper, ProfileLogo, ProfileLogoContainer } from '../styledComponents/Navbar'
+ import React, { useContext, useEffect, useState } from 'react'
+import { AnkarTag, LogoContainer, LogoImg, LogoText, MainMenuContainer, MenuContainer, MenuElement, MenuElementContainer, MenuElementWrapper, MenuWrapper, NavContainer, NavElement, NavElementWrapper, NavWrapper, ProfileLogo, ProfileLogoContainer } from '../styledComponents/Navbar'
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useNavigate } from 'react-router-dom';
 import logoImg from '../images/MatchMaking24-friendship-dating-matrimony-match-logo.svg'
@@ -49,18 +49,18 @@ export const Navbar = () => {
             <MenuWrapper>
               {
                 (isAuthenticated && !isLoading) ?<>
-                <ProfileLogoContainer><ProfileLogo src={user.picture}/></ProfileLogoContainer>
-                <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/profile"}><MenuElement>Profile <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
+                <ProfileLogoContainer><ProfileLogo src={user?.picture}/></ProfileLogoContainer>
+                <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/profile"}><MenuElement><MenuElementWrapper>User Profile <ArrowForwardIcon/></MenuElementWrapper></MenuElement></Link></MenuElementContainer>
                 </>
                 : 
                 <MenuElementContainer><MenuElement style={{maxWidth:'max-content'}} onClick={() => loginWithPopup()}> Signup With <img height={'20px'} width={'20px'} style={{marginLeft:'-7px',marginBottom:'-3px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
               }
              
-              {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={userData?.gender?"/right-match-for-friendship-dating-matrimony":null}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>:null}
+              {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={userData?.gender?"/right-match-for-friendship-dating-matrimony":null}><MenuElement><MenuElementWrapper>Find Match <ArrowForwardIcon/></MenuElementWrapper></MenuElement></Link></MenuElementContainer>:null}
               <MenuElementContainer><AnkarTag onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty'  href={"/#Confession"}><MenuElement> Confession  <ArrowForwardIcon/></MenuElement></AnkarTag></MenuElementContainer>
+              <MenuElementContainer><AnkarTag onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' href={"https://blog.matchmaking24.com/"} target={'_blank'}><MenuElement>Blog <ArrowForwardIcon/></MenuElement></AnkarTag></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/about"}><MenuElement>About <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/contact"}><MenuElement>Contact <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
-              <MenuElementContainer><AnkarTag onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' href={"https://blog.matchmaking24.com/"} target={'_blank'}><MenuElement>Blog <ArrowForwardIcon/></MenuElement></AnkarTag></MenuElementContainer>
               {
                 (isAuthenticated && !isLoading) ?
                 <MenuElementContainer><MenuElement onClick={() => logout()}>Sign Out</MenuElement></MenuElementContainer>
