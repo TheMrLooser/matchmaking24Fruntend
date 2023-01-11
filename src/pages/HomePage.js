@@ -248,7 +248,7 @@ PaperProps: {
                     <FilterH5>Language : </FilterH5> 
                     <FilterElement> 
                             <FilterSelect onChange={(e)=>{setLanguage(e.target.value)}}>
-                                <FilterOption selected disabled>Hindi</FilterOption>
+                                <FilterOption selected disabled>language</FilterOption>
                                 {languagesList.map((name) => (
                                     <FilterOption>{name}</FilterOption>
                                 ))}
