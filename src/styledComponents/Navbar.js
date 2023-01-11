@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+ import styled from 'styled-components';
 
 export const NavContainer = styled.div`
 width:100%;
@@ -142,30 +142,36 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-/* border: 1px solid gray; */
 padding-left: 20%;
 &:hover{
     background-color:#FF90E8 ;
-    /* box-shadow: 5px 5px 7px; */
 }
 
 
 `
 export const MenuElement = styled.div`
 width: 100%;
-max-width: 55%;
-/* max-width: max-content; */
+max-width: 65%;
 height: 50px;
-/* border: 1px solid gray; */
 font-size: 25px;
 font-weight: 600;
 display: flex;
 align-items: center;
-/* justify-content: space-between; */
 cursor: pointer;
 gap: 10px;
  
  
+`
+export const MenuElementWrapper = styled.div`
+width: 100%;
+min-width: max-content;
+height: 50px;
+font-size: 25px;
+font-weight: 600;
+display: flex;
+align-items: center;
+cursor: pointer;
+gap: 10px;
 `
 export const ProfileLogoContainer = styled.div`
 border: 1px solid gray;
