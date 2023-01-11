@@ -55,17 +55,35 @@ PaperProps: {
 };
 
 
-    const names = [
-        'Hindi', 
-        'English',
-        'Urdu',
-        'Tamil',
-        'Omar Alexander',
-        'Carlos Abbott',
-        'Miriam Wagner',
-        'Bradley Wilkerson',
-        'Virginia Andrews',
-        'Kelly Snyder',
+   
+ const names = [
+    'Hindi',
+    'English',
+    'Urdu',
+    'Chinese',
+    'Arabic',
+    'Hebrew',
+    'Persian',
+    'Tamil',
+    'Punjabi',
+    'Malayalam',
+    'Dutch',
+    'French',
+    'German',
+    'Indonesian',
+    'Italian',
+    'Japanese',
+    'Korean',
+    'Malaysian',
+    'Norwegian',
+    'Polish',
+    'Portuguese',
+    'Romanian',
+    'Russian',
+    'Spanish',
+    'Swedish',
+      
+     
     ];
 
     const LookingforTags = [
