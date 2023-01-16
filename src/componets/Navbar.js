@@ -15,17 +15,27 @@ export const Navbar = () => {
   const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout ,loginWithPopup} = useAuth0();
   const [openMenuBar,setOpenMenuBar] = useState(false)
   const {setUserData,userData} = useContext(UserProfileData)
+  const [allowNevigate,setAllowNevigate] = useState(false)
   const nevigate =  useNavigate()
   useEffect(()=>{
     const login = async()=>{
       const res = await axios.post(`${HOST_NAME}/user/register`,{email:user.email,name:user.name,img:user.picture})
       if(res.data.message!="Profile Registerd"){
         setUserData(res.data.message)
-        nevigate('/profile')
+        if(allowNevigate){
+          nevigate("/profile");
+      }
       }
     }
     login()
   },[user])
+
+  const handalClickRender = () => {
+    if (!isAuthenticated) {
+        setAllowNevigate(true)
+      loginWithPopup();
+    }
+  };
 
   return (
     <> 
@@ -36,7 +46,7 @@ export const Navbar = () => {
                 <NavElementWrapper>
                     <NavElement> <Link className='Links inheritProperty' to={"/"}>Home</Link></NavElement>
                     <NavElement><AnkarTag href='https://blog.matchmaking24.com/' target={'_blank'}>Blog</AnkarTag> </NavElement>
-                    { (!isAuthenticated && !isLoading ) && <NavElement onClick={() => loginWithPopup()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'5px'}} src={LinkedinLogo}/> </NavElement>}
+                    { (!isAuthenticated && !isLoading ) && <NavElement onClick={handalClickRender}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'5px'}} src={LinkedinLogo}/> </NavElement>}
                     <NavElement display={'block'} ><MenuIcon sx={{fontSize:'40px'}} onClick={()=>setOpenMenuBar(true)} /></NavElement>
                 </NavElementWrapper>
                  
@@ -53,7 +63,7 @@ export const Navbar = () => {
                 <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/profile"}><MenuElement><MenuElementWrapper>User Profile <ArrowForwardIcon/></MenuElementWrapper></MenuElement></Link></MenuElementContainer>
                 </>
                 : 
-                <MenuElementContainer><MenuElement style={{maxWidth:'max-content'}} onClick={() => loginWithPopup()}> Signup With <img height={'20px'} width={'20px'} style={{marginLeft:'-7px',marginBottom:'-3px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
+                <MenuElementContainer><MenuElement onClick={handalClickRender}><MenuElementWrapper> Signup With <img height={'20px'} width={'20px'} style={{marginLeft:'-7px',marginBottom:'-3px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElementWrapper></MenuElement></MenuElementContainer>
               }
              
               {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={userData?.gender?"/right-match-for-friendship-dating-matrimony":null}><MenuElement><MenuElementWrapper>Find Match <ArrowForwardIcon/></MenuElementWrapper></MenuElement></Link></MenuElementContainer>:null}
