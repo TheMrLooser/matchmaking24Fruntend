@@ -139,7 +139,7 @@ export const Landingpage = () => {
                     No More Swipes
                   </TopBannarLeftPartElement>
                   <TopBannarLeftPartElement>
-                    No More Images
+                    Not Just Images
                   </TopBannarLeftPartElement>
                 </TopBannarLeftPartElementWrapper>
               </TopBannarLeftPartContainer>
@@ -340,8 +340,7 @@ export const Landingpage = () => {
                 <Banner_2_ElementText
                   style={{ textAlign: "justify", marginTop: "-20px" }}
                 >
-                  There is more to life then just swiping left - right and
-                  humans are more then images.
+                  We belive humans are more then images. So no more left - right swipes.
                 </Banner_2_ElementText>
               </Banner_2_ElementWrapper>
               <Banner_2_ElementWrapper style={{ border: "none" }}>
@@ -353,7 +352,7 @@ export const Landingpage = () => {
                 <Banner_2_ElementText
                   style={{ textAlign: "justify", marginTop: "-20px" }}
                 >
-                  Use any chat, message, and flirt options to make connections.
+                  Use any chat, message, and social media options to make connections.
                 </Banner_2_ElementText>
               </Banner_2_ElementWrapper>
             </Banner_4_elementWrapper>
