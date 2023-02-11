@@ -104,7 +104,7 @@ export const Landingpage = () => {
     }
   };
   return (
-    <>
+    <> 
       <Container>
         <Wrapper>
           <TopBannarWrapper>
