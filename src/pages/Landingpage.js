@@ -48,10 +48,6 @@ import frndImg5 from "../images/MatchMaking24-best-dating-for-working-profetiona
 import frndImg4 from "../images/MatchMaking-portal-for-linkedin-users-4.png"; // MatchMaking24-best-matrimonial-for-working-profetionals
 import frndImg3 from "../images/MatchMaking24-best-matrimonial-for-working-profetionals-03.png"; // MatchMaking-portal-for-linkedin-users
 
-// import img01 from '../images/01.svg'
-// import img02 from '../images/02.svg'
-// import img003 from '../images/003.svg'MatchMaking24-friendship-dating-matrimony-match
-
 import star from "../images/MatchMaking24-best-matrimonial-for-working-profetionals-star.svg";
 import hand from "../images/MatchMaking24-best-dating-for-working-profetionals-hand.svg";
 import cupal from "../images/MatchMaking24-best-dating-for-working-profetionals-cupal.png";
@@ -70,11 +66,9 @@ import { UserProfileData } from "../App";
 
 export const Landingpage = () => {
   const {
-    loginWithRedirect,
     user,
     isAuthenticated,
     isLoading,
-    logout,
     loginWithPopup,
   } = useAuth0();
   const { setUserData, userData } = useContext(UserProfileData);
