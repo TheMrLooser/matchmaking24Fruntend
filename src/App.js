@@ -13,7 +13,7 @@ import PrivacyAndPolicy from './pages/PrivecyPolicy';
 import { NotFoundPage } from './pages/NotFoundPage';
 import ProfileUpdate from './componets/profileUpdate';
 import ShowProfile from './componets/ShowProfile';
-import ContactPage from './pages/ContactPage';
+import ContactPage from './pages/ContactPage'; 
 
 export const UserProfileData = createContext(null)
 

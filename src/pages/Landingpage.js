@@ -79,7 +79,7 @@ export const Landingpage = () => {
   } = useAuth0();
   const { setUserData, userData } = useContext(UserProfileData);
   const nevigate = useNavigate();
-  const [allowNevigate,setAllowNevigate] = useState(false)
+  const [allowNevigate, setAllowNevigate] = useState(false);
   useEffect(() => {
     const login = async () => {
       const res = await axios.post(`${HOST_NAME}/user/register`, {
@@ -89,8 +89,8 @@ export const Landingpage = () => {
       });
       if (res.data.message != "Profile Registerd") {
         setUserData(res.data.message);
-        if(allowNevigate){
-            nevigate("/profile");
+        if (allowNevigate) {
+          nevigate("/profile");
         }
       }
     };
@@ -99,7 +99,7 @@ export const Landingpage = () => {
 
   const handalClickRender = () => {
     if (!isAuthenticated) {
-        setAllowNevigate(true)
+      setAllowNevigate(true);
       loginWithPopup();
     }
   };
@@ -111,8 +111,11 @@ export const Landingpage = () => {
             <TopBannarContainer>
               <TopBannarLeftPartContainer>
                 <TopBannarLeftPartHeading className="font">
-                  MatchMaking Portal <br />
-                  For LinkedIn Users <br /> Around The World{" "}
+                  Matchmaking portal
+                  <br />
+                  for meeting up with
+                  <br />
+                  stranger in real-life <br />{" "}
                 </TopBannarLeftPartHeading>
                 <BtnContainer>
                   <Link
@@ -139,7 +142,7 @@ export const Landingpage = () => {
                     No More Swipes
                   </TopBannarLeftPartElement>
                   <TopBannarLeftPartElement>
-                    No More Images
+                    Verified Profiles
                   </TopBannarLeftPartElement>
                 </TopBannarLeftPartElementWrapper>
               </TopBannarLeftPartContainer>
@@ -178,11 +181,14 @@ export const Landingpage = () => {
                     How We Are Different From Others
                   </Banner_2_heading>{" "}
                   <Banner_1_ElementText>
-                    MatchMaking24 isn’t like other dating websites. Here, you’ll
-                    find a community of similar thinkers and a community of
-                    singles who are tired of the singles and dating scene and
-                    want to find a love that will last with someone who wants
-                    the same thing, a loving & meaningful relationship.
+                    MatchMaking24.com isn't like other dating websites. Here you
+                    can meet with strangers in real life, for going to a cafe,
+                    restaurants, or an outdoor activity together. Fill out a
+                    profile, view other users, filter out men or women, and
+                    start inviting. All profiles are public and LinkedIn
+                    verified. Profiles consist of a profile picture plus
+                    professional and educational status. We believe in human
+                    more than their just images.
                   </Banner_1_ElementText>
                 </Banner_3_Text>
               </Banner_3_Wrapper>
@@ -247,11 +253,11 @@ export const Landingpage = () => {
               <Banner_3_Wrapper>
                 <Banner_3_Text>
                   <Banner_2_heading className="font">
-                    Find that Groovy Kind of Love
+                    Ready to find something real
                   </Banner_2_heading>
-                  Friends are great, but love is better! Waiting for a sign to
-                  get yourself out there? Here it is! Now, it’s your turn to
-                  find someone to groove with.
+                  Great! You'll be at right platform, where 91% of our profiles
+                  are looking for something serious match. That means no more
+                  swiping, and *actual* dating.
                 </Banner_3_Text>
               </Banner_3_Wrapper>
               <Banner_3_HandImg src={hand} />
@@ -269,7 +275,7 @@ export const Landingpage = () => {
                 <BannerHeadingContainer>
                   <Banner_4_heading className="font">
                     {" "}
-                    Why to <br /> Choose Us?
+                    How it works
                   </Banner_4_heading>
                 </BannerHeadingContainer>
                 <Banner_2_ElementText
@@ -280,20 +286,22 @@ export const Landingpage = () => {
                   }}
                 >
                   {" "}
-                  It's not just online dating, it's <br />
-                  online dating with benefits
+                  It's no more an online dating,
+                  <br />
+                  Now meet someone in real life.
                   <Banner_4_elementWrapper>
                     <Banner_4_elements>
-                      <ArrowForwardIcon /> Verified users
+                      <ArrowForwardIcon /> Signup for free
                     </Banner_4_elements>
                     <Banner_4_elements>
-                      <ArrowForwardIcon /> Chat and Message Options
+                      <ArrowForwardIcon /> Filter right profile
                     </Banner_4_elements>
                     <Banner_4_elements>
-                      <ArrowForwardIcon /> Dynamic Profile Filtering
+                      <ArrowForwardIcon />
+                      Check social media profile
                     </Banner_4_elements>
                     <Banner_4_elements>
-                      <ArrowForwardIcon /> Thousands of members
+                      <ArrowForwardIcon /> Write them an invite message
                     </Banner_4_elements>
                   </Banner_4_elementWrapper>
                 </Banner_2_ElementText>
