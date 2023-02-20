@@ -10,7 +10,7 @@ import {
   TopBannarLeftPartHeading,
   Wrapper,
   BtnContainer,
-  SmilyImg,
+  SmilyImg, 
   TopBannerImgContainer,
   Banner_2_container,
   Banner_2_heading,
@@ -105,12 +105,8 @@ export const Landingpage = () => {
             <TopBannarContainer>
               <TopBannarLeftPartContainer>
                 <TopBannarLeftPartHeading className="font">
-                  Matchmaking portal
-                  <br />
-                  for meeting up with
-                  <br />
-                  stranger in real-life <br />{" "}
-                </TopBannarLeftPartHeading>
+                  Matchmaking portal for meeting up with stranger in real-life
+                </TopBannarLeftPartHeading> 
                 <BtnContainer>
                   <Link
                     className="Links"
