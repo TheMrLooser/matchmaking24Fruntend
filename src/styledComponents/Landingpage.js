@@ -99,32 +99,26 @@ max-width:100%;
 display:flex;
 flex-direction:column;
 gap:50px;
-${'' /* border:1px solid red; */}
 `
 export const TopBannarLeftPartHeading = styled.h1`
 font-size:40px;
 color:white;
- width:540px; 
+width: 100%;
+max-width:540px; 
  height: 30vh;
-//  border:1px solid red; 
  line-height: 60px;
  display: flex;
  flex-direction: column;
  justify-content: flex-end;
- @media only screen and (max-width:600px){
-font-size:30px;
+ @media only screen and (max-width:900px){
+font-size:35px;
  width:100%; 
-/* border:1px solid red;  */
  line-height: 50px;
  height: fit-content;
      
 };
- @media only screen and (max-width:500px){
-font-size:35px;
- width:fit-content; 
-     
-};
-`
+  
+`  
 export const BtnContainer  = styled.div`
 width:100%;
 max-width:200px;
